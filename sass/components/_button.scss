@@ -1,0 +1,19 @@
+.btn {
+  width: 90%;
+  display: block;
+  margin: 2rem auto;
+  padding: 1rem 0;
+  background-color: $color-primary-dim;
+  border-radius: $radius-default;
+  box-shadow: $shadow-no-x;
+  transition: $transition-default;
+
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+
+  &:hover {
+    background-color: $color-secondary;
+  }
+}

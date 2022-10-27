@@ -1,11 +1,73 @@
+.colored-text {
+  color: $color-primary;
+}
+
+.content {
+  padding: 3rem 1.5rem;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.main-nav {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: $color-primary-dim;
+  z-index: 1;
+  transform: translateY(-100%);
+
+  ul {
+    @include absolute-center;
+    width: 100%;
+  }
+
+  li {
+    width: 100%;
+    display: block;
+    text-transform: uppercase;
+    padding: 5rem 0;
+    transition: $transition-default;
+
+    font-size: 3rem;
+    text-align: center;
+
+    a {
+      cursor: pointer;
+    }
+
+    &:hover {
+      background-color: $color-secondary;
+    }
+  }
+}
+
 .hero {
   height: 50vh;
   width: 100vw;
-  background: url("../assets/images/hero-bg-sm.webp");
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("../assets/images/hero-bg-sm.webp");
   background-size: cover;
   background-position: center;
 
   .content {
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    h1 {
+      width: 100%;
+      @include absolute-center;
+    }
+  }
+}
+
+.about-me {
+  background-color: $background-secondary;
+
+  .content {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 5rem;
   }
 }
 
@@ -14,12 +76,217 @@
   flex-direction: column;
 
   .project-card {
+    position: relative;
     width: 100%;
+    margin-bottom: 5rem;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: $background-card;
 
     .card-front {
+      height: 100%;
       padding: 10px;
+
       img {
         width: 100%;
+        border-radius: $radius-default;
+        box-shadow: $shadow-no-x;
+        margin-bottom: 3rem;
+      }
+
+      h3 {
+        text-transform: uppercase;
+        margin-top: 3rem;
+        position: relative;
+
+        &::after {
+          content: "";
+          width: 90%;
+          height: 2px;
+          background-color: $color-primary-dim;
+          position: absolute;
+          bottom: -5px;
+          left: 5%;
+        }
+      }
+    }
+
+    .card-back {
+      position: relative;
+
+      .links {
+        position: relative;
+      }
+    }
+  }
+}
+
+.contact-me {
+  background-color: $background-secondary;
+
+  label {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .select-group {
+    position: relative;
+
+    select {
+      text-shadow: $shadow-text;
+    }
+
+    .select-icon {
+      position: absolute;
+      top: 25%;
+      right: 1rem;
+      font-size: 5rem;
+      font-weight: bold;
+      pointer-events: none;
+      text-shadow: $shadow-text;
+    }
+  }
+}
+
+.alert-box {
+  position: fixed;
+  width: 50%;
+  left: 50%;
+  background-color: $color-primary-dim;
+  padding: 2rem;
+  border-radius: $radius-default;
+  bottom: 0;
+  transform: translate(-50%, 100%);
+  box-shadow: $shadow-no-x;
+
+  .close-button {
+    font-size: 3rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    color: $color-secondary;
+    z-index: 1;
+
+    ::after {
+      content: "";
+      width: 20px;
+      height: 20px;
+      background-color: $color-text;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: -1;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .content {
+    width: 80%;
+  }
+
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+
+    .card-front {
+      p {
+        margin-bottom: 5rem;
+      }
+    }
+
+    .card-back {
+      position: relative;
+      transform: translatey(-150%);
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .content {
+    width: 50%;
+  }
+
+  .hero {
+    height: 90vh;
+  }
+
+  .about-me {
+    .content {
+      width: 50%;
+    }
+  }
+
+  .my-projects {
+    .content {
+      width: 90%;
+      .projects-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 3rem;
+
+        .project-card {
+          border-radius: $radius-default;
+          perspective: 150rem;
+          font-size: 1.8rem;
+          background-color: transparent;
+
+          &:hover {
+            .card-front {
+              transform: rotateY(180deg);
+            }
+
+            .card-back {
+              transform: rotateY(0);
+            }
+          }
+
+          .card-front,
+          .card-back {
+            transition: $transition-default;
+          }
+
+          .card-front {
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            background: linear-gradient(
+              to bottom right,
+              #444,
+              $background-card
+            );
+
+            p {
+              margin-bottom: 15rem;
+            }
+          }
+
+          .card-back {
+            height: 100%;
+            width: 100%;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(to bottom right, #444, #222);
+
+            transform: rotateY(180deg);
+            backface-visibility: hidden;
+
+            .links {
+              width: 80%;
+              @include absolute-center;
+
+              a:first-of-type {
+                margin-bottom: 10rem;
+              }
+            }
+          }
+        }
       }
     }
   }
