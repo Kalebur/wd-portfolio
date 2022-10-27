@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #fff;
+  background-color: #111;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Arvo", serif;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+.hero {
+  height: 50vh;
+  width: 100vw;
+  background: url("../assets/images/hero-bg-sm.webp");
+  background-size: cover;
+  background-position: center;
+}
+.projects-container {
+  display: flex;
+  flex-direction: column;
+}
+.projects-container .project-card {
+  width: 100%;
+}
+.projects-container .project-card .card-front {
+  padding: 10px;
+}
+.projects-container .project-card .card-front img {
+  width: 100%;
+}

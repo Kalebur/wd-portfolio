@@ -1,0 +1,26 @@
+.hero {
+  height: 50vh;
+  width: 100vw;
+  background: url("../assets/images/hero-bg-sm.webp");
+  background-size: cover;
+  background-position: center;
+
+  .content {
+  }
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+
+  .project-card {
+    width: 100%;
+
+    .card-front {
+      padding: 10px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
