@@ -23,15 +23,15 @@
     <title>Portfolio | Dev by James</title>
   </head>
   <body>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="#about-me">About Me</a></li>
-        <li>My Projects</li>
-        <li>Contact</li>
-      </ul>
-    </nav>
     <header class="hero">
       <div class="content">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#my-projects">My Projects</a></li>
+            <li><a href="#contact-me">Contact Me</a></li>
+          </ul>
+        </nav>
         <h1>
           Hello! I'm <span class="colored-text">James</span>.<br />
           I build <span class="colored-text">websites</span>.
@@ -135,6 +135,35 @@
               </div>
             </div>
           </div>
+          <div class="project-card">
+            <div class="card-front">
+              <h3>Luna Bella's Authentic Italian</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro
+                perferendis cum officia quas! Nihil tempora dolor repellat quo
+                atque modi molestiae, sapiente fugit quaerat? Rem aperiam dolor
+                error placeat eligendi.
+              </p>
+            </div>
+            <div class="card-back">
+              <div class="links">
+                <a
+                  class="btn"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View Site</a
+                >
+                <a
+                  class="btn"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View GitHub Repo</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -150,7 +179,11 @@
               id="name"
               spellcheck="false"
               autocomplete="name"
+              required
             />
+            <span class="validation-info"
+              >Name must be at least 2 letters.</span
+            >
           </div>
           <div class="input-group">
             <label for="email">E-mail</label>
@@ -160,7 +193,11 @@
               id="email"
               spellcheck="false"
               autocomplete="email"
+              required
             />
+            <span class="validation-info"
+              >Please enter a valid e-mail address.</span
+            >
           </div>
           <div class="input-group select-group">
             <div class="select-icon">&darr;</div>
@@ -178,7 +215,11 @@
               id="comments"
               cols="30"
               rows="10"
+              required
             ></textarea>
+            <span class="validation-info"
+              >Message must be at least 2 letters.</span
+            >
           </div>
           <a href="javascript:void(0);" class="btn">Send Message</a>
         </form>

@@ -57,10 +57,11 @@ select,
 textarea {
   display: block;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   padding: 1.5rem;
   border-radius: $radius-default;
   font-size: 2rem;
+  transition: $transition-default;
 }
 
 select,
@@ -68,14 +69,46 @@ option {
   border: none;
   outline: none;
   color: $color-text;
-  background-color: $color-primary-dim;
   appearance: none;
   cursor: pointer;
+}
+
+select {
+  background-color: $color-secondary;
+}
+
+option {
+  background-color: $color-primary-dim;
 }
 
 textarea {
   resize: none;
   margin-bottom: 4rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: $shadow-focus-glow;
+  outline: none;
+}
+
+@media screen and (min-width: 601px) {
+  body {
+    font-size: 1.8rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+  }
 }
 
 @media screen and (min-width: 1000px) {

@@ -10,11 +10,12 @@
 
 .main-nav {
   position: fixed;
-  width: 100%;
+  width: 105%;
   height: 100vh;
   background-color: $color-primary-dim;
   z-index: 1;
-  transform: translateY(-100%);
+  margin-left: -5%;
+  transform: translateY(calc(-100% - 3rem));
 
   ul {
     @include absolute-center;
@@ -80,7 +81,6 @@
     width: 100%;
     margin-bottom: 5rem;
     border-radius: 10px;
-    overflow: hidden;
     background-color: $background-card;
 
     .card-front {
@@ -146,6 +146,22 @@
       text-shadow: $shadow-text;
     }
   }
+
+  .input-group {
+    position: relative;
+
+    .validation-info {
+      display: none;
+      position: absolute;
+      right: 0;
+      bottom: -2rem;
+      font-size: 1.2rem;
+
+      &.displayed {
+        display: block;
+      }
+    }
+  }
 }
 
 .alert-box {
@@ -188,10 +204,48 @@
     width: 80%;
   }
 
+  .about-me .content {
+    width: 70%;
+    font-size: 1.8rem;
+  }
+
+  .main-nav {
+    background-color: transparent;
+    position: relative;
+    transform: translateY(0);
+    height: initial;
+    width: initial;
+    margin-left: 0;
+    width: 100%;
+    padding-right: 3rem;
+
+    ul {
+      display: inline-block;
+      position: relative;
+      transform: translate(0, 0);
+      top: initial;
+      left: initial;
+      display: flex;
+      justify-content: space-between;
+
+      li {
+        display: inline-block;
+        width: initial;
+        flex-basis: 30%;
+        border-radius: $radius-medium;
+        padding: 2rem 0;
+      }
+    }
+  }
+
+  .hero {
+    height: 75vh;
+  }
+
   .projects-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 3rem;
+    gap: 3rem;
 
     .card-front {
       p {
@@ -232,12 +286,13 @@
         .project-card {
           border-radius: $radius-default;
           perspective: 150rem;
+          -moz-perspective: 150rem;
           font-size: 1.8rem;
           background-color: transparent;
 
           &:hover {
             .card-front {
-              transform: rotateY(180deg);
+              transform: rotateY(-180deg);
             }
 
             .card-back {
@@ -248,6 +303,7 @@
           .card-front,
           .card-back {
             transition: $transition-default;
+            border-radius: $radius-medium;
           }
 
           .card-front {

@@ -74,10 +74,11 @@ select,
 textarea {
   display: block;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   padding: 1.5rem;
   border-radius: 5px;
   font-size: 2rem;
+  transition: all 0.4s;
 }
 
 select,
@@ -85,11 +86,18 @@ option {
   border: none;
   outline: none;
   color: #fff;
-  background-color: #07be62;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   cursor: pointer;
+}
+
+select {
+  background-color: #ff0048;
+}
+
+option {
+  background-color: #07be62;
 }
 
 textarea {
@@ -97,6 +105,27 @@ textarea {
   margin-bottom: 4rem;
 }
 
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: 0 0 20px #00ff7f;
+  outline: none;
+}
+
+@media screen and (min-width: 601px) {
+  body {
+    font-size: 1.8rem;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 2.5rem;
+  }
+}
 @media screen and (min-width: 1000px) {
   body {
     font-size: 2rem;
@@ -130,11 +159,12 @@ footer {
 
 .main-nav {
   position: fixed;
-  width: 100%;
+  width: 105%;
   height: 100vh;
   background-color: #07be62;
   z-index: 1;
-  transform: translateY(-100%);
+  margin-left: -5%;
+  transform: translateY(calc(-100% - 3rem));
 }
 .main-nav ul {
   position: absolute;
@@ -197,7 +227,6 @@ footer {
   width: 100%;
   margin-bottom: 5rem;
   border-radius: 10px;
-  overflow: hidden;
   background-color: #333;
 }
 .projects-container .project-card .card-front {
@@ -253,6 +282,19 @@ footer {
   pointer-events: none;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
+.contact-me .input-group {
+  position: relative;
+}
+.contact-me .input-group .validation-info {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: -2rem;
+  font-size: 1.2rem;
+}
+.contact-me .input-group .validation-info.displayed {
+  display: block;
+}
 
 .alert-box {
   position: fixed;
@@ -291,10 +333,43 @@ footer {
   .content {
     width: 80%;
   }
+  .about-me .content {
+    width: 70%;
+    font-size: 1.8rem;
+  }
+  .main-nav {
+    background-color: transparent;
+    position: relative;
+    transform: translateY(0);
+    height: initial;
+    width: initial;
+    margin-left: 0;
+    width: 100%;
+    padding-right: 3rem;
+  }
+  .main-nav ul {
+    display: inline-block;
+    position: relative;
+    transform: translate(0, 0);
+    top: initial;
+    left: initial;
+    display: flex;
+    justify-content: space-between;
+  }
+  .main-nav ul li {
+    display: inline-block;
+    width: initial;
+    flex-basis: 30%;
+    border-radius: 10px;
+    padding: 2rem 0;
+  }
+  .hero {
+    height: 75vh;
+  }
   .projects-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 3rem;
+    gap: 3rem;
   }
   .projects-container .card-front p {
     margin-bottom: 5rem;
@@ -326,11 +401,12 @@ footer {
   .my-projects .content .projects-container .project-card {
     border-radius: 5px;
     perspective: 150rem;
+    -moz-perspective: 150rem;
     font-size: 1.8rem;
     background-color: transparent;
   }
   .my-projects .content .projects-container .project-card:hover .card-front {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
   }
   .my-projects .content .projects-container .project-card:hover .card-back {
     transform: rotateY(0);
@@ -338,6 +414,7 @@ footer {
   .my-projects .content .projects-container .project-card .card-front,
 .my-projects .content .projects-container .project-card .card-back {
     transition: all 0.4s;
+    border-radius: 10px;
   }
   .my-projects .content .projects-container .project-card .card-front {
     width: 100%;
