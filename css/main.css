@@ -93,7 +93,7 @@ option {
 }
 
 select {
-  background-color: #ff0048;
+  background-color: #b30032;
 }
 
 option {
@@ -164,7 +164,10 @@ footer {
   background-color: #07be62;
   z-index: 1;
   margin-left: -5%;
-  transform: translateY(calc(-100% - 3rem));
+  transform: translateY(-3rem);
+  -webkit-clip-path: circle(3.75rem at calc(100% - 7.75rem) 6.75rem);
+          clip-path: circle(3.75rem at calc(100% - 7.75rem) 6.75rem);
+  transition: all 0.4s;
 }
 .main-nav ul {
   position: absolute;
@@ -185,7 +188,7 @@ footer {
 .main-nav li a {
   cursor: pointer;
 }
-.main-nav li:hover {
+.main-nav li:hover, .main-nav li:active {
   background-color: #ff0048;
 }
 
@@ -208,9 +211,39 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.hero .content .hamburger {
+  height: 7.5rem;
+  width: 7.5rem;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  right: 5%;
+  background-color: #07be62;
+  border-radius: 50%;
+  z-index: 10;
+  font-size: 5rem;
+}
+.hero .content .hamburger .fa-xmark {
+  display: none;
+}
+.hero .content .hamburger i {
+  pointer-events: none;
+}
+.hero .content .hamburger.nav-active .fa-bars {
+  display: none;
+}
+.hero .content .hamburger.nav-active .fa-xmark {
+  display: inline-block;
+}
+.hero .content .hamburger.nav-active + nav {
+  -webkit-clip-path: circle(150% at 2.5% 95%);
+          clip-path: circle(150% at 2.5% 95%);
+}
 
 .about-me {
-  background-color: #251111;
+  background-color: #1e281f;
 }
 .about-me .content {
   width: 90%;
@@ -261,7 +294,7 @@ footer {
 }
 
 .contact-me {
-  background-color: #251111;
+  background-color: #1e281f;
 }
 .contact-me label {
   display: block;
@@ -275,12 +308,13 @@ footer {
 }
 .contact-me .select-group .select-icon {
   position: absolute;
-  top: 25%;
+  top: 35%;
   right: 1rem;
   font-size: 5rem;
   font-weight: bold;
   pointer-events: none;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  transform: translateY(-5%);
 }
 .contact-me .input-group {
   position: relative;
@@ -333,6 +367,9 @@ footer {
   .content {
     width: 80%;
   }
+  .hero .content .hamburger {
+    display: none;
+  }
   .about-me .content {
     width: 70%;
     font-size: 1.8rem;
@@ -346,6 +383,8 @@ footer {
     margin-left: 0;
     width: 100%;
     padding-right: 3rem;
+    -webkit-clip-path: unset;
+            clip-path: unset;
   }
   .main-nav ul {
     display: inline-block;
@@ -362,6 +401,7 @@ footer {
     flex-basis: 30%;
     border-radius: 10px;
     padding: 2rem 0;
+    font-size: 2rem;
   }
   .hero {
     height: 75vh;
@@ -385,6 +425,9 @@ footer {
   }
   .hero {
     height: 90vh;
+  }
+  .main-nav ul li {
+    font-size: 2.5rem;
   }
   .about-me .content {
     width: 50%;

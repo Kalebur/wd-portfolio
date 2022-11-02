@@ -15,7 +15,9 @@
   background-color: $color-primary-dim;
   z-index: 1;
   margin-left: -5%;
-  transform: translateY(calc(-100% - 3rem));
+  transform: translateY(-3rem);
+  clip-path: circle(3.75rem at calc(100% - 7.75rem) 6.75rem);
+  transition: $transition-default;
 
   ul {
     @include absolute-center;
@@ -36,7 +38,8 @@
       cursor: pointer;
     }
 
-    &:hover {
+    &:hover,
+    &:active {
       background-color: $color-secondary;
     }
   }
@@ -58,6 +61,44 @@
     h1 {
       width: 100%;
       @include absolute-center;
+    }
+
+    .hamburger {
+      height: 7.5rem;
+      width: 7.5rem;
+      position: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      right: 5%;
+      background-color: $color-primary-dim;
+      border-radius: $radius-circle;
+      z-index: 10;
+
+      font-size: 5rem;
+
+      .fa-xmark {
+        display: none;
+      }
+
+      i {
+        pointer-events: none;
+      }
+
+      &.nav-active {
+        .fa-bars {
+          display: none;
+        }
+
+        .fa-xmark {
+          display: inline-block;
+        }
+
+        & + nav {
+          clip-path: circle(150% at 2.5% 95%);
+        }
+      }
     }
   }
 }
@@ -138,12 +179,13 @@
 
     .select-icon {
       position: absolute;
-      top: 25%;
+      top: 35%;
       right: 1rem;
       font-size: 5rem;
       font-weight: bold;
       pointer-events: none;
       text-shadow: $shadow-text;
+      transform: translateY(-5%);
     }
   }
 
@@ -204,6 +246,10 @@
     width: 80%;
   }
 
+  .hero .content .hamburger {
+    display: none;
+  }
+
   .about-me .content {
     width: 70%;
     font-size: 1.8rem;
@@ -218,6 +264,7 @@
     margin-left: 0;
     width: 100%;
     padding-right: 3rem;
+    clip-path: unset;
 
     ul {
       display: inline-block;
@@ -234,6 +281,8 @@
         flex-basis: 30%;
         border-radius: $radius-medium;
         padding: 2rem 0;
+
+        font-size: 2rem;
       }
     }
   }
@@ -267,6 +316,10 @@
 
   .hero {
     height: 90vh;
+  }
+
+  .main-nav ul li {
+    font-size: 2.5rem;
   }
 
   .about-me {

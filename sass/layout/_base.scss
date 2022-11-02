@@ -74,7 +74,7 @@ option {
 }
 
 select {
-  background-color: $color-secondary;
+  background-color: darken($color-secondary, 15%);
 }
 
 option {
