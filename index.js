@@ -10,6 +10,7 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Nav links close mobile nav menu when clicked
   document.querySelectorAll("nav a").forEach(function (item) {
     item.addEventListener("click", function () {
       globalVars.hamburgerBtn.classList.remove("nav-active");

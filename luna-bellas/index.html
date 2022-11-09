@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luna Bella's Authentic Italian</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&family=Playfair+Display:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="modal">
+      <div class="content">
+        <h2>Luna Bella's</h2>
+        <p>Thank you for your reservation, <span id="customer-name"></span>!</p>
+        <p>
+          Your table for <span id="num-guests"></span> has been reserved for
+          <span id="reservation-date"></span> at
+          <span id="reserve-time"></span>. We look forward to serving you!
+        </p>
+        <p>
+          Changes to the number of guests on your reservation can be made for
+          the next 24 hours. For any additional questions or cancellations,
+          please call us at (555) 555-5555.
+        </p>
+        <a href="javascript:void(0);" class="btn" id="btn-modal-close"
+          >Close Window</a
+        >
+      </div>
+    </div>
+    <header id="top" class="no-js">
+      <div class="logo-nav no-js">
+        <p class="logo">Luna Bella's</p>
+        <nav class="main-nav" aria-expanded="false" role="navigation">
+          <i class="fa-solid fa-bars hamburger"></i>
+          <i class="fa-solid fa-xmark close-btn"></i>
+          <ul>
+            <li class="nav-link"><a href="#story">Story</a></li>
+            <li class="nav-link"><a href="#food">Food</a></li>
+            <li class="nav-link"><a href="#staff">Staff</a></li>
+            <li class="nav-link"><a href="#wines">Wines</a></li>
+            <li class="nav-link"><a href="#location">Location</a></li>
+          </ul>
+        </nav>
+      </div>
+      <h1>Experience <span class="subheader">the flavors of Italy</span></h1>
+      <a href="#book-now" class="btn">Book a Table</a>
+    </header>
+    <section class="our-story" id="story">
+      <div class="content">
+        <h2>Our Story</h2>
+        <div class="story-text">
+          <p>
+            Luna Bella got her love for food and cooking from her grandmother,
+            Electra. At a young age, Electra began teaching her how to cook with
+            the traditional Italian recipes she'd grown up with in Florence,
+            Italy. Electra was born and raised in Italy, moving to the U.S. in
+            her mid-30s, so she passed on not only the recipes she loved but
+            also stories of life there, and Luna Bella fell in love with all of
+            it.
+          </p>
+          <p>
+            After graduating high school, Luna Bella moved to Italy to pursue a
+            culinary education and to get closer to the types of food her
+            grandmother taught her to make. She finished her education and spent
+            another 10 years working and learning in Rome. It was during this
+            time that she met Constantino and they became fast friends who
+            decided to open a restaurant together in America in order to share
+            genuine Italian recipes with everyone.
+          </p>
+        </div>
+        <img
+          src="assets/images/grandma.webp"
+          alt="Luna Bella's grandmother, Electra"
+        />
+      </div>
+    </section>
+    <section class="our-food" id="food">
+      <div class="content">
+        <h2>Our Food</h2>
+        <h3 class="food-type">Pasta</h3>
+        <p class="food-desc">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex sit rem
+          autem libero pariatur recusandae. Iste sapiente doloremque unde
+          dolorum itaque eaque consequatur magni odit id? Possimus, commodi ex!
+          Dolore?
+        </p>
+        <div class="switcher-buttons">
+          <button data-food-index="0" class="switcher-button active">
+            <span class="sr-only">Show Pasta Info</span>
+          </button>
+          <button data-food-index="1" class="switcher-button">
+            <span class="sr-only">Show Pizza Info</span>
+          </button>
+          <button data-food-index="2" class="switcher-button">
+            <span class="sr-only">Show Soups Info</span>
+          </button>
+          <button data-food-index="3" class="switcher-button">
+            <span class="sr-only">Show Breads Info</span>
+          </button>
+          <button data-food-index="4" class="switcher-button">
+            <span class="sr-only">Show Desserts Info</span>
+          </button>
+        </div>
+        <button class="btn-chevron prev-food">
+          <i class="fa-solid fa-chevron-left"></i></button
+        ><button class="btn-chevron next-food">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+    <section class="our-staff" id="staff">
+      <div class="content">
+        <h2>Meet Our Staff</h2>
+        <p>
+          With a combined 75 years of kitchen experience and 40 years of
+          experience living and cooking in Italy, our chefs are more than
+          qualified to provide an authentic Italian dining experience.
+        </p>
+        <div class="staff-container">
+          <div class="staff-card">
+            <img
+              src="assets/images/luna-bella.webp"
+              alt="Head chef, Luna Bella, in the kitchen."
+            />
+            <h3>Head Chef &mdash; Luna Bella</h3>
+          </div>
+          <div class="staff-card">
+            <img
+              src="assets/images/constantino.webp"
+              alt="Sous Chef, Constantino, plating up some spaghetti."
+            />
+            <h3>Sous Chef &mdash; Constantino</h3>
+          </div>
+          <div class="staff-card">
+            <img
+              src="assets/images/trevor.webp"
+              alt="Sous Chef, Trevor, in the kitchen"
+            />
+            <h3>Sous Chef &mdash; Trevor</h3>
+          </div>
+          <div class="staff-card">
+            <img
+              src="assets/images/stephen.webp"
+              alt="Stephen, the restaurant's Maître d'"
+            />
+            <h3>Maître d' - Stephen</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="our-wines" id="wines">
+      <div class="content">
+        <h2>Our Wines</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam
+          dolores illo mollitia at ducimus saepe aliquam nostrum laborum? Sunt
+          eum officia odio enim sapiente porro consequatur numquam ullam.
+          Numquam aut magnam error, nam quidem nostrum placeat! Deserunt odit
+          modi omnis!
+        </p>
+      </div>
+    </section>
+    <section class="book-now" id="book-now">
+      <div class="content">
+        <h2>Book a Table</h2>
+        <form action="">
+          <p class="input-group">
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" autocomplete="name" />
+            <small>Name must be at least 2 letters long.</small>
+          </p>
+          <p class="input-group">
+            <label for="phone">Phone Number</label>
+            <input id="tel" type="tel" name="phone" autocomplete="tel" />
+            <small
+              >Please enter a valid telephone number (e.g. (555)
+              555-5555)</small
+            >
+          </p>
+          <p class="input-group">
+            <label for="reservation-day">Reservation Day/Time</label>
+            <input
+              id="date"
+              type="date"
+              name="reservation-day"
+              autocomplete="off"
+            />
+            <small
+              >Reservations must be made
+              <strong>two (2) days in advance.</strong></small
+            >
+          </p>
+          <p class="input-group">
+            <label for="reservation-time">Reservation Time</label>
+            <select name="reservation-time" id="reservation-time"></select>
+          </p>
+          <p class="input-group">
+            <label for="guest-count">Guest Count</label>
+            <input
+              type="number"
+              autocomplete="off"
+              min="2"
+              max="20"
+              value="2"
+              name="guest-count"
+              id="guest-count"
+            />
+          </p>
+          <button class="btn" id="btn-book">Book Now</button>
+        </form>
+      </div>
+    </section>
+    <section class="contact-info" id="location">
+      <div class="content">
+        <h2>Our Location</h2>
+        <div class="contact-container">
+          <img
+            src="assets/images/luna-bellas-loc.webp"
+            alt="Location of Luna Bella's on Google maps"
+          />
+          <div class="hours">
+            <h3>Hours</h3>
+            <p>mon:<span class="time">4pm &mdash; 10pm</span></p>
+            <p>tue:<span class="time">4pm &mdash; 10pm</span></p>
+            <p>wed:<span class="time">4pm &mdash; 10pm</span></p>
+            <p>thu:<span class="time">4pm &mdash; 10pm</span></p>
+            <p>fri:<span class="time">4pm &mdash; 12am</span></p>
+            <p>sat:<span class="time">4pm &mdash; 12am</span></p>
+            <p>sun:<span class="time">12pm &mdash; 9pm</span></p>
+          </div>
+          <div class="contact-and-socials">
+            <h3>Contact Us</h3>
+            <p>P:(555) 555-5555</p>
+            <p>E:hello@lunabellasitalian.com</p>
+            <address>
+              1307 W Main St <br />
+              Lexington, KY 40508
+            </address>
+
+            <h3>Socials</h3>
+            <div class="social-icons">
+              <a
+                href="javascript:void(0);"
+                class="social-icon"
+                aria-label="Visit us on Facebook"
+                ><i class="fa-brands fa-facebook-f"></i></a
+              ><a
+                href="javascript:void(0);"
+                class="social-icon"
+                aria-label="Follow us on Twitter"
+                ><i class="fa-brands fa-twitter"></i></a
+              ><a
+                href="javascript:void(0);"
+                class="social-icon"
+                aria-label="Follow us on Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>&copy;2022 Luna Bella's Italian Cuisine</p>
+      <p>Privacy Policy</p>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
