@@ -1,28 +1,3 @@
-@-webkit-keyframes send-message {
-  0% {
-    display: block;
-    opacity: 0;
-  }
-  40% {
-    left: calc(50% - 1.25rem);
-  }
-  45% {
-    top: 120%;
-  }
-  50% {
-    left: 40%;
-    top: 120%;
-    opacity: 1;
-  }
-  75% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-    left: 110%;
-    top: 120%;
-  }
-}
 @keyframes send-message {
   0% {
     display: block;
@@ -136,9 +111,7 @@ option {
   border: none;
   outline: none;
   color: #fff;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   cursor: pointer;
 }
 
@@ -215,8 +188,7 @@ footer {
   z-index: 1;
   margin-left: -5%;
   transform: translateY(-3rem);
-  -webkit-clip-path: circle(3.75rem at calc(100% - 7.75rem) 6.75rem);
-          clip-path: circle(3.75rem at calc(100% - 7.75rem) 6.75rem);
+  clip-path: circle(3.75rem at calc(100% - 7.75rem) 6.75rem);
   transition: all 0.4s;
 }
 .main-nav ul {
@@ -288,8 +260,7 @@ footer {
   display: inline-block;
 }
 .hero .content .hamburger.nav-active + nav {
-  -webkit-clip-path: circle(150% at 2.5% 95%);
-          clip-path: circle(150% at 2.5% 95%);
+  clip-path: circle(150% at 2.5% 95%);
 }
 
 .about-me {
@@ -299,6 +270,9 @@ footer {
   width: 90%;
   margin: 0 auto;
   padding-bottom: 5rem;
+}
+.about-me .content p {
+  margin-bottom: 3rem;
 }
 
 .projects-container {
@@ -414,12 +388,9 @@ footer {
 }
 .contact-me #btn-send-message .message-icon.displayed {
   display: block;
-  -webkit-animation-name: send-message;
-          animation-name: send-message;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-name: send-message;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
 
 .alert-box {
@@ -485,8 +456,7 @@ footer {
     margin-left: 0;
     width: 100%;
     padding-right: 3rem;
-    -webkit-clip-path: unset;
-            clip-path: unset;
+    clip-path: unset;
   }
   .main-nav ul {
     display: inline-block;
@@ -537,6 +507,7 @@ footer {
   }
   .about-me .content {
     width: 50%;
+    font-size: 2.2rem;
   }
   .my-projects .content {
     width: 90%;
@@ -544,8 +515,7 @@ footer {
   .my-projects .content .projects-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    -moz-column-gap: 3rem;
-         column-gap: 3rem;
+    column-gap: 3rem;
   }
   .my-projects .content .projects-container .project-card {
     border-radius: 5px;
@@ -568,8 +538,7 @@ footer {
   .my-projects .content .projects-container .project-card .card-front {
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
+    backface-visibility: hidden;
     background: linear-gradient(to bottom right, #444, #333);
   }
   .my-projects .content .projects-container .project-card .card-front p {
@@ -583,8 +552,7 @@ footer {
     left: 0;
     background: linear-gradient(to bottom right, #444, #222);
     transform: rotateY(180deg);
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
+    backface-visibility: hidden;
   }
   .my-projects .content .projects-container .project-card .card-back .links {
     width: 80%;
