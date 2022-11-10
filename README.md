@@ -1,8 +1,8 @@
-#Personal Web Development Portfolio
+# Personal Web Development Portfolio
 
 This project is my personal portfolio that includes the web sites I've built during my first session of Code Kentucky. The three projects listed in the portfolio are part of this and the features on their cards are what to look for in each one. With the project containing four sites with their various images, it might take a few minutes to download it.
 
-##Project Features
+## Project Features
 
 - Create a responsive menu with CSS/JavaScript
 - Add your own transition animation(s) to an element on hover.
