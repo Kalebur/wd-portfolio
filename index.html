@@ -71,12 +71,24 @@
                 src="assets/images/paws-city-photo-sm.png"
                 alt="A screenshot of the Paws City Pet Supply Co. website."
               />
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro
-                perferendis cum officia quas! Nihil tempora dolor repellat quo
-                atque modi molestiae, sapiente fugit quaerat? Rem aperiam dolor
-                error placeat eligendi.
-              </p>
+              <h4>Features</h4>
+              <ul>
+                <li>Create a responsive menu with JavaScript/CSS</li>
+                <li>Create a simple hide/show div with CSS</li>
+                <li>
+                  Add your own transition animation(s) to an element on hover.
+                </li>
+                <li>
+                  Create and populate a JavaScript array with one or more values
+                  and display the contents of some or all of the array on your
+                  page
+                </li>
+                <li>
+                  Because the site is only one page, the search field/button
+                  will open a new tab/window and run your query through Google
+                  Shopping
+                </li>
+              </ul>
             </div>
             <div class="card-back">
               <div class="links">
@@ -112,12 +124,14 @@
                 src="assets/images/derby-city-sm.png"
                 alt="A screenshot of the Derby City Drip website."
               />
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro
-                perferendis cum officia quas! Nihil tempora dolor repellat quo
-                atque modi molestiae, sapiente fugit quaerat? Rem aperiam dolor
-                error placeat eligendi.
-              </p>
+              <h4>Features</h4>
+              <ul>
+                <li>Create a responsive menu with JavaScript</li>
+                <li>
+                  Add your own transition animation(s) to an element on hover.
+                </li>
+                <li>Create a simple hide/show div with CSS</li>
+              </ul>
             </div>
             <div class="card-back">
               <div class="links">
@@ -141,28 +155,48 @@
           <div class="project-card">
             <div class="card-front">
               <h3>Luna Bella's Authentic Italian</h3>
-              <img src="assets/images/luna-bela-md.png" />
-              <p>
-                PLACEHOLDER PROJECT CARD<br />
-                PLACEHOLDER PROJECT CARD<br />
-                PLACEHOLDER PROJECT CARD<br />
-                PLACEHOLDER PROJECT CARD<br />
-                PLACEHOLDER PROJECT CARD<br />
-                PLACEHOLDER PROJECT CARD<br />
-              </p>
+              <img
+                srcset="
+                  assets/images/luna-sm.webp 442w,
+                  assets/images/luna-md.webp 726w,
+                  assets/images/luna-lg.webp 952w
+                "
+                sizes="(max-width:600px) 442px,
+                       (min-width:601px) and (max-width:999px) 726px,
+                       952px"
+                src="assets/images/luna-sm.png"
+                alt="A screenshot of the Luna Bella's Authentic Italian website."
+              />
+              <h4>Features</h4>
+              <ul>
+                <li>
+                  Fully responsive site with hamburger on mobile screens smaller
+                  than 600px
+                </li>
+                <li>
+                  Create and populate a JavaScript array with one or more values
+                  and display the contents of some or all of the array on your
+                  page
+                </li>
+                <li>
+                  Add your own transition animation(s) to an element on hover.
+                </li>
+                <li>Create a responsive menu with JavaScript/CSS</li>
+                <li>JavaScript form validation</li>
+              </ul>
             </div>
             <div class="card-back">
               <div class="links">
                 <a
                   class="btn"
-                  href="#"
+                  href="luna-bellas/index.html"
                   target="_blank"
                   rel="noopener noreferrer"
                   >View Site</a
                 >
                 <a
                   class="btn"
-                  href="#"
+                  href="https://github.com/Kalebur/luna-bellas-authentic-italian"
                   target="_blank"
                   rel="noopener noreferrer"
                   >View GitHub Repo</a
@@ -227,11 +261,14 @@
               >Message must be at least 2 letters.</span
             >
           </div>
-          <a href="javascript:void(0);" class="btn">Send Message</a>
+          <a class="btn" id="btn-send-message" href="#btn-send-message"
+            ><span class="message-icon"
+              ><i class="fa-solid fa-envelope"></i></span
+            ><span class="btn-text">Send Message</span></a
+          >
         </form>
       </div>
     </section>
-    <footer>&copy; 2022 James Smith</footer>
     <div class="alert-box">
       <h3>I'm Open for Work</h3>
       <p>
@@ -240,6 +277,7 @@
       </p>
       <div class="close-button"><i class="fa-solid fa-circle-xmark"></i></div>
     </div>
+    <footer>&copy; 2022 James Smith</footer>
     <script src="index.js"></script>
   </body>
 </html>

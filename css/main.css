@@ -1,3 +1,53 @@
+@-webkit-keyframes send-message {
+  0% {
+    display: block;
+    opacity: 0;
+  }
+  40% {
+    left: calc(50% - 1.25rem);
+  }
+  45% {
+    top: 120%;
+  }
+  50% {
+    left: 40%;
+    top: 120%;
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    left: 110%;
+    top: 120%;
+  }
+}
+@keyframes send-message {
+  0% {
+    display: block;
+    opacity: 0;
+  }
+  40% {
+    left: calc(50% - 1.25rem);
+  }
+  45% {
+    top: 120%;
+  }
+  50% {
+    left: 40%;
+    top: 120%;
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    left: 110%;
+    top: 120%;
+  }
+}
 .btn {
   width: 90%;
   display: block;
@@ -276,15 +326,30 @@ footer {
   text-transform: uppercase;
   margin-top: 3rem;
   position: relative;
+  min-height: 10rem;
+  border-bottom: 2px solid #00ff7f;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 2rem;
+  font-size: 3rem;
 }
-.projects-container .project-card .card-front h3::after {
-  content: "";
-  width: 90%;
-  height: 2px;
-  background-color: #07be62;
-  position: absolute;
-  bottom: -5px;
-  left: 5%;
+.projects-container .project-card .card-front h4 {
+  border-bottom: 2px solid #fff;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+}
+.projects-container .project-card .card-front ul {
+  margin-bottom: 3rem;
+}
+.projects-container .project-card .card-front ul li {
+  list-style: disc;
+  margin-left: 2rem;
+  margin-bottom: 3rem;
+  font-size: 1.8rem;
 }
 .projects-container .project-card .card-back {
   position: relative;
@@ -318,28 +383,61 @@ footer {
 }
 .contact-me .input-group {
   position: relative;
+  margin-bottom: 6rem;
+}
+.contact-me .input-group input.invalid,
+.contact-me .input-group textarea.invalid {
+  border: 5px solid red;
+  box-shadow: 0 0 10rem red;
+}
+.contact-me .input-group input.invalid + .validation-info,
+.contact-me .input-group textarea.invalid + .validation-info {
+  display: block;
 }
 .contact-me .input-group .validation-info {
   display: none;
   position: absolute;
   right: 0;
-  bottom: -2rem;
-  font-size: 1.2rem;
+  bottom: -4rem;
+  font-size: 1.8rem;
 }
-.contact-me .input-group .validation-info.displayed {
+.contact-me #btn-send-message {
+  position: relative;
+  margin: 4rem auto;
+}
+.contact-me #btn-send-message .message-icon {
+  font-size: 4rem;
+  display: none;
+  position: absolute;
+  left: calc(50% - 1.25rem);
+  top: calc(50% - 2.5rem);
+}
+.contact-me #btn-send-message .message-icon.displayed {
   display: block;
+  -webkit-animation-name: send-message;
+          animation-name: send-message;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .alert-box {
   position: fixed;
-  width: 50%;
+  width: 75%;
   left: 50%;
-  background-color: #07be62;
+  bottom: 0;
+  background-color: #058d49;
   padding: 2rem;
   border-radius: 5px;
-  bottom: 0;
   transform: translate(-50%, 100%);
   box-shadow: 0 5px 20px black;
+  transition: all 0.4s;
+  transition-delay: 0s;
+}
+.alert-box.displayed {
+  transform: translate(-50%, -10%);
+  transition-delay: 1s;
 }
 .alert-box .close-button {
   font-size: 3rem;
@@ -373,6 +471,10 @@ footer {
   .about-me .content {
     width: 70%;
     font-size: 1.8rem;
+  }
+  .alert-box {
+    width: 60%;
+    font-size: 2rem;
   }
   .main-nav {
     background-color: transparent;
@@ -411,8 +513,8 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
   }
-  .projects-container .card-front p {
-    margin-bottom: 5rem;
+  .projects-container .project-card .card-front h3 {
+    font-size: 3rem;
   }
   .projects-container .card-back {
     position: relative;
@@ -422,6 +524,10 @@ footer {
 @media screen and (min-width: 1000px) {
   .content {
     width: 50%;
+  }
+  .alert-box {
+    width: 40%;
+    font-size: 2.2rem;
   }
   .hero {
     height: 90vh;

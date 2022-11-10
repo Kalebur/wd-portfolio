@@ -139,15 +139,35 @@
         text-transform: uppercase;
         margin-top: 3rem;
         position: relative;
+        min-height: 10rem;
+        border-bottom: 2px solid $color-primary;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 2rem;
 
-        &::after {
-          content: "";
-          width: 90%;
-          height: 2px;
-          background-color: $color-primary-dim;
-          position: absolute;
-          bottom: -5px;
-          left: 5%;
+        font-size: 3rem;
+      }
+
+      h4 {
+        border-bottom: 2px solid $color-text;
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+        padding-bottom: 1rem;
+
+        font-size: 2rem;
+      }
+
+      ul {
+        margin-bottom: 3rem;
+
+        li {
+          list-style: disc;
+          margin-left: 2rem;
+          margin-bottom: 3rem;
+
+          font-size: 1.8rem;
         }
       }
     }
@@ -191,16 +211,45 @@
 
   .input-group {
     position: relative;
+    margin-bottom: 6rem;
+
+    input,
+    textarea {
+      &.invalid {
+        border: 5px solid red;
+        box-shadow: $shadow-invalid;
+
+        & + .validation-info {
+          display: block;
+        }
+      }
+    }
 
     .validation-info {
       display: none;
       position: absolute;
       right: 0;
-      bottom: -2rem;
-      font-size: 1.2rem;
+      bottom: -4rem;
+      font-size: 1.8rem;
+    }
+  }
+
+  #btn-send-message {
+    position: relative;
+    margin: 4rem auto;
+
+    .message-icon {
+      font-size: 4rem;
+      display: none;
+      position: absolute;
+      left: calc(50% - 1.25rem);
+      top: calc(50% - 2.5rem);
 
       &.displayed {
         display: block;
+        animation-name: send-message;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
       }
     }
   }
@@ -208,14 +257,21 @@
 
 .alert-box {
   position: fixed;
-  width: 50%;
+  width: 75%;
   left: 50%;
-  background-color: $color-primary-dim;
+  bottom: 0;
+  background-color: darken($color-primary-dim, 10);
   padding: 2rem;
   border-radius: $radius-default;
-  bottom: 0;
   transform: translate(-50%, 100%);
   box-shadow: $shadow-no-x;
+  transition: $transition-default;
+  transition-delay: 0s;
+
+  &.displayed {
+    transform: translate(-50%, -10%);
+    transition-delay: 1s;
+  }
 
   .close-button {
     font-size: 3rem;
@@ -253,6 +309,12 @@
   .about-me .content {
     width: 70%;
     font-size: 1.8rem;
+  }
+
+  .alert-box {
+    width: 60%;
+
+    font-size: 2rem;
   }
 
   .main-nav {
@@ -296,9 +358,11 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
 
-    .card-front {
-      p {
-        margin-bottom: 5rem;
+    .project-card {
+      .card-front {
+        h3 {
+          font-size: 3rem;
+        }
       }
     }
 
@@ -312,6 +376,12 @@
 @media screen and (min-width: 1000px) {
   .content {
     width: 50%;
+  }
+
+  .alert-box {
+    width: 40%;
+
+    font-size: 2.2rem;
   }
 
   .hero {
