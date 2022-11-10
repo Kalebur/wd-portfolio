@@ -54,9 +54,9 @@ window.addEventListener("DOMContentLoaded", () => {
     }, 1000);
   });
 
+  // Validate form and push buttons
   btnSendMsg.addEventListener("click", (e) => {
     e.preventDefault();
-    console.log("MEOW");
     let isFormValid = true;
 
     if (!validateName(name.value.trim())) {
