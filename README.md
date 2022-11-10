@@ -12,6 +12,8 @@ This project is my personal portfolio that includes the web sites I've built dur
 
 ### Pagespeed Insight Scores
 
+---
+
 #### Portfolio Site
 
 ![Portfolio pagespeed insight scores](https://cdn.discordapp.com/attachments/469532919363272704/1040163329844453407/portfolio-mobile-score.jpg)
