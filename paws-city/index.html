@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paws City Pet Supply Co.</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;400;500;600;700&family=Roboto:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="header-top">
+        <div class="content-area">
+          <p>
+            <i class="fa-sharp fa-solid fa-house-chimney"></i
+            ><a href="">Home</a>
+          </p>
+          <p>
+            <a href="">Find a Store</a>
+            <span class="vertical-divider">|</span>
+            Customer Support: (800) 555 5555
+          </p>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="content-area">
+          <img
+            src="assets/logos/pawscity-logo.png"
+            alt="The logo for Paws City Pet Supply Company."
+          />
+          <div class="input-group">
+            <label for="search" data-id="search-label">
+              <input
+                type="search"
+                name="search"
+                id="search"
+                placeholder="search..."
+                autocomplete="off"
+              />
+            </label>
+            <button>
+              <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="content-area">
+          <nav>
+            <a class="menu-button" id="menu-button" href="#menu-button"
+              ><i class="fa-solid fa-bars"></i
+            ></a>
+            <ul>
+              <a href="#pet-dogs"><li class="menu-dogs">Dogs</li></a>
+              <a href="#pet-cats"><li class="menu-cats">Cats</li></a>
+              <a href="#pet-birds"><li class="menu-birds">Birds</li></a>
+              <a href="#pet-fish"><li class="menu-fish">Fish</li></a>
+              <a href="#pet-reptiles"
+                ><li class="menu-reptiles">Reptiles</li></a
+              >
+            </ul>
+          </nav>
+          <h1>The best care for your little one</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+            quaerat, veniam aperiam odit soluta autem fuga dolores laborum?
+          </p>
+          <button data-id="schedule-button">Schedule</button>
+        </div>
+      </section>
+
+      <section class="pet-types">
+        <div class="content-area">
+          <div class="pet-type-card pet-dogs" id="pet-dogs">
+            <div class="card-info">
+              <h2>DOGS</h2>
+              <p>Treats and toys for "man's best friend!"</p>
+              <a href="" class="button">Shop Now</a>
+            </div>
+          </div>
+          <div class="pet-type-card pet-cats" id="pet-cats">
+            <div class="card-info">
+              <h2>Cats</h2>
+              <p>Treats and toys for your feline master!</p>
+              <a href="" class="button">Shop Now</a>
+            </div>
+          </div>
+          <div class="pet-type-card pet-birds" id="pet-birds">
+            <div class="card-info">
+              <h2>Birds</h2>
+              <p>Fine goods for your feathered friends.</p>
+              <a href="" class="button">Shop Now</a>
+            </div>
+          </div>
+          <div class="pet-type-card pet-fish" id="pet-fish">
+            <div class="card-info">
+              <h2>Fish</h2>
+              <p>All you need for your aquatic pals!</p>
+              <a href="" class="button">Shop Now</a>
+            </div>
+          </div>
+          <div class="pet-type-card pet-reptiles" id="pet-reptiles">
+            <div class="card-info">
+              <h2>Reptiles</h2>
+              <p>Goodies for your reptilian friends!</p>
+              <a href="" class="button">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-doggo">
+        <div class="content-area">
+          <img
+            src="assets/photos/doggo-photo.png"
+            alt="A photo of a happy looking dog in a yellow sweater."
+          />
+          <div class="about-info">
+            <h2>About Doggo</h2>
+            <p>
+              Doggo ipsum heck heckin good boys and girls fluffer dat tungg tho
+              pats long doggo borkdrive, sub woofer waggy wags tungg fat boi.
+              Shoob dat tungg tho very taste wow noodle horse boof long bois
+              shoober long woofer, super chub maximum borkdrive such treat dat
+              tungg tho smol borking doggo with a long snoot for pats.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured-products">
+        <div class="content-area">
+          <h2>Top Recommendations</h2>
+          <p>
+            Top-selling items and popular picks by our customers. Check them
+            now!
+          </p>
+          <div class="products">
+            <div class="product-card">
+              <img
+                src="assets/photos/doggo-product-photo.png"
+                alt="A french bulldog wearing a yellow sweater and looking back over its shoulder at the viewer."
+              />
+              <h3 class="product-name">Dog Hoodie</h3>
+              <p class="product-price">$9.99</p>
+              <a href="" class="button btn-orange">Add to Cart</a>
+            </div>
+            <div class="product-card">
+              <img
+                src="assets/photos/doggo-product-photo.png"
+                alt="A french bulldog wearing a yellow sweater and looking back over its shoulder at the viewer."
+              />
+              <h3 class="product-name">Red Doggie Hoodie</h3>
+              <p class="product-price">$39.99</p>
+              <a href="" class="button btn-orange">Add to Cart</a>
+            </div>
+            <div class="product-card">
+              <img
+                src="assets/photos/doggo-product-photo.png"
+                alt="A french bulldog wearing a yellow sweater and looking back over its shoulder at the viewer."
+              />
+              <h3 class="product-name">Banana PJ Set</h3>
+              <p class="product-price">$19.99</p>
+              <a href="" class="button btn-orange">Add to Cart</a>
+            </div>
+            <div class="product-card">
+              <img
+                src="assets/photos/doggo-product-photo.png"
+                alt="A french bulldog wearing a yellow sweater and looking back over its shoulder at the viewer."
+              />
+              <h3 class="product-name">Pillow Bed</h3>
+              <p class="product-price">$29.99</p>
+              <a href="" class="button btn-orange">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-us">
+        <div class="content-area">
+          <div class="about-info">
+            <h2>About Paws City <span>Pet Supply Co.</span></h2>
+            <p>
+              Paws City is a fine retailer that offers goods for your pets: cats
+              and dogs, fish, rabbits, birds, and many other animals. We sell
+              pet food, supplies, clothes, and different products by the best
+              American and European manufacturers. We are pet lovers, just like
+              you, and pick only the best and high quality goods.
+            </p>
+          </div>
+          <img
+            src="assets/photos/about-pawscity.jpg"
+            alt="A shop window with an open sign hanging in it."
+          />
+        </div>
+      </section>
+
+      <section class="testimonials">
+        <div class="content-area">
+          <h2>Testimonials by Our Clients</h2>
+          <p>
+            We're happy with each review you leave! Thank you for your trust!
+          </p>
+          <div class="testimonial">
+            <div class="testimonial-text">
+              <p>
+                &ldquo;I often order food for my dog from this store as they
+                offer free shipping. The prices here are quite low, and you can
+                order a lot of great goods by top manufacturers.&rdquo;
+              </p>
+              <p>Elaine Bennett</p>
+            </div>
+            <div class="testimonial-photo"></div>
+            <button class="showcase-btn previous-button">
+              <i class="fa-sharp fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="showcase-btn next-button">
+              <i class="fa-sharp fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-us">
+        <div class="content-area">
+          <div class="contact-info">
+            <h3>Corporate</h3>
+            <address>
+              1234 W. Main St<br />
+              Louisville, KY 40213
+            </address>
+            <p>P: (502) 555 5555</p>
+            <p>E: hello@pawscity.com</p>
+
+            <h3>Social</h3>
+            <div class="social-icons">
+              <a href="" class="social-icon"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a href="" class="social-icon"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+              <a href="" class="social-icon"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a href="" class="social-icon"
+                ><i class="fa-brands fa-tiktok"></i
+              ></a>
+            </div>
+          </div>
+          <form action="" class="contact-form" method="post">
+            <h3>Contact</h3>
+            <div class="input-group" id="name-group">
+              <label for="full-name">Name:</label>
+              <input
+                type="text"
+                name="full-name"
+                id="full-name"
+                placeholder="Full Name"
+                autocomplete="name"
+                required
+              />
+              <p class="invalid-alert no-display">
+                Name must be at least 2 letters long.
+              </p>
+            </div>
+            <div class="input-group" id="email-group">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                required
+              />
+              <p class="invalid-alert no-display">
+                Please enter a valid email address.
+              </p>
+            </div>
+            <div class="input-group" id="message-group">
+              <label for="message">Message:</label>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="5"
+                placeholder="Send us a message..."
+                required
+              ></textarea>
+              <p class="invalid-alert no-display">
+                Message must be at least 2 letters long.
+              </p>
+            </div>
+            <button class="btn-orange" data-id="contact-btn">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <div class="modal no-display">
+        <div class="modal-content">
+          <img
+            src="assets/logos/pawscity-logo.png"
+            alt="Logo for Paws City Pet Supply Co."
+          />
+          <h3 data-id="modal-thank-you">
+            Thank you for contacting us,
+            <span data-id="modal-customer-name">valued customer</span>!
+          </h3>
+          <p>
+            A member of our staff will have a look at your message as soon as
+            possible. If a follow up is required, we will get in touch with you
+            within 4 - 6 hours.
+          </p>
+          <button class="btn-orange">Back to Site</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="content-area">
+        <p>&copy; Copyright 2022 Paws City Pet Supply Co.</p>
+        <p>
+          <a href="">Privacy Policy</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
